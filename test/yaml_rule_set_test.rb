@@ -15,7 +15,7 @@ class YamlRuleSetTest < Test::Unit::TestCase
     end
 
     should 'be initialized when the app is created' do
-      Rack::Rewrite::YamlRuleSet.expects(:new).with(all_of({:file_name => @file_name}))
+      Rack::Rewrite::YamlRuleSet.expects(:new).with({:file_name => @file_name})
       @rack = Rack::Rewrite.new(@app, 
         :klass => Rack::Rewrite::YamlRuleSet, 
         :options => {:file_name => @file_name}

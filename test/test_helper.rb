@@ -4,6 +4,7 @@ require 'bundler/setup'
 Bundler.require :default, :development
 
 require 'test/unit'
+require 'mocha/test_unit'
 
 class Test::Unit::TestCase
 end

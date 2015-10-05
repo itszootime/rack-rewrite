@@ -46,7 +46,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'shoulda', '~> 2.10.2'
-  s.add_development_dependency 'mocha', '~> 0.9.7'
+  s.add_development_dependency 'mocha', '~> 1.1.0'
   s.add_development_dependency 'rack'
 
   if s.respond_to? :specification_version then
