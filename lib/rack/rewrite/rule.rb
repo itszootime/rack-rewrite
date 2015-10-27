@@ -4,8 +4,13 @@ module Rack
   class Rewrite
     class RuleSet
       attr_reader :rules
+
       def initialize(options = {})#:nodoc:
         @rules = []
+      end
+
+      def find_first_matching_rule(env) #:nodoc:
+        @rules.detect { |rule| rule.matches?(env) }
       end
 
       protected
